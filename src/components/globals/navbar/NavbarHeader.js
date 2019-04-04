@@ -10,13 +10,13 @@ export default class NavbarHeader extends Component {
     const {handleNavbar} = this.props;
     return (
       <HeaderWrapper>
-        <Link to='/'>
+        <Link to="/">
             <img src={companyLogo} alt ="company name"/>
         </Link>
         <FaAlignRight 
           className="toggle-icon" 
-          onClick = {()=>{handleNavbar()}}>
-        </FaAlignRight>
+          onClick = {()=>{handleNavbar()}}
+        />
       </HeaderWrapper>
     )
   }
@@ -32,6 +32,8 @@ const HeaderWrapper = styled.div `
     cursor: pointer;
   }
   @media (min-width:768px) {
-    display: none;
+    .toggle-icon {
+      display: none;
+    }
   }
 `
