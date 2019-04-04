@@ -7,12 +7,12 @@ import { FaBeer } from 'react-icons/fa';
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const MenuPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h3>home page</h3>
+    <h3>This is Menu page</h3>
   </Layout>
 )
 
 
-export default IndexPage
+export default MenuPage
