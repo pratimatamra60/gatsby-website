@@ -1,16 +1,18 @@
 import React from "react"
 //import styled from "styled-components";
 //import { Link } from "gatsby"
-import { FaBeer } from 'react-icons/fa';
 
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import {HomeHeader} from "../utils"
+import img from '../images/bcg/homeBcg.jpeg'
+
 
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <h3>home page</h3>
+    <HomeHeader img={img}> home header</HomeHeader>
   </Layout>
 )
 
