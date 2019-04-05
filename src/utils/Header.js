@@ -6,10 +6,20 @@ import img from '../images/bcg/homeBcg.jpeg'
 function HomeHeader({img, children}) {
   return (
     <IndexHeader img= {img}>
-      {children}
+    {children}
     </IndexHeader>
   )
 }
+
+function PageHeader({img, children}) {
+  return (
+    <DefaultHeader img= {img}>
+    {children}
+    </DefaultHeader>
+  )
+}
+
+
 const IndexHeader = styled.header `
   min-height: calc(100vh - 55px);
   background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
@@ -18,10 +28,18 @@ const IndexHeader = styled.header `
   display:flex;
   justify-content:center;
   align-items:center;
-
 `
+//using all styled variable as IndexHeader except height
+const DefaultHeader = styled(IndexHeader) `
+  min-height: 60vh;
+`
+
 //default props to be sure that image is always displayed
 HomeHeader.defaultProps = {
   img:img,
 }
-export {HomeHeader}
+
+PageHeader.defaultProps = {
+  img:img,
+}
+export {HomeHeader, PageHeader}
