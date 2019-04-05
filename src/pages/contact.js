@@ -5,7 +5,7 @@ import React from "react"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import {PageHeader} from '../utils'
+import {PageHeader, Banner} from '../utils'
 import contactImg from '../images/bcg/contactBcg.jpeg'
 
 
@@ -13,8 +13,7 @@ const MenuPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <PageHeader img={contactImg}>
-    <h3>This is contact page</h3>
-
+    <Banner title = "Contact Us" subtitle ="Lets be in touch"></Banner>
     </PageHeader>
   </Layout>
 )
