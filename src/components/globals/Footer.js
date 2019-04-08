@@ -29,13 +29,11 @@ export default class Footer extends Component {
         <div className ="title">eatery</div>
         <div className ="icons">
           {this.state.icons.map(item => {
-              <a 
-                href={item.path}  
-                key={item.id} 
-                target="_blank" 
-                rel="noopener noreferrer">
+              return(
+                <a href={item.path}  key={item.id} target="_blank" rel="noopener noreferrer">
                     {item.icon}
-              </a>
+                </a>
+              )
           })}
       </div>
       <p className="copyright">&copy; 2019 eatery</p>
